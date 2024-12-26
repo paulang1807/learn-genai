@@ -88,5 +88,7 @@ nav:
     - NLP Concepts: index.md
     - NLP Modeling Basics: nlpb.md
     - NLP Models: nlp.md
-    - GenAI Basics: genai.md
+  - GenAI:
+    - Prompts: prompts.md
+    - OpenAI: openai.md
     - Local Execution: local.md

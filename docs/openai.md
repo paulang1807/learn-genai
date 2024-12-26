@@ -1,17 +1,3 @@
-## Prompts
-
-### Completion Prompts
-
-- Suitable for ==**single-turn tasks**== where the model generates a response based on a single input prompt
-- Conversation context/history and role seggregation is not essential
-- Works well for content generation, summarization, question-answering etc.
-
-### Chat Prompts
-
-- Designed for ==**multi-turn conversations**== with multiple roles (user, assistant, system etc.)
-- Maintains conversation context by processing the entire conversation history
-- Ideal for chatbot applications and tasks requiring back-and-forth interactions
-
 ## OpenAI
 !!! info "API Parameters"
     - **Max Tokens**: Determines the maximum number of tokens that can be generated. This parameter helps control the verbosity of the response. The value typically ranges between 0 and 2048, though it can vary depending on the model and context.
@@ -30,5 +16,3 @@
     | Creative Writing | 0.7 | 0.8 | Generates creative and diverse text less constrained by patterns.      |
     | Data Analysis Scripting | 0.2 | 0.1 | Generates focussed, efficient and correct analysis scripts.      |
     | Exploratory Code Writing | 0.6 | 0.7 | Generates creative code that considers and explores multiple solutions.      |
-
-*[GPT]: Generative Pre-Trained Transformers
