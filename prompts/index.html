@@ -12,26 +12,28 @@
         <meta name="author" content="Angshuman Paul">
       
       
-        <link rel="canonical" href="https://paulang1807.github.io/learn-genai/">
+        <link rel="canonical" href="https://paulang1807.github.io/learn-genai/prompts/">
       
       
+        <link rel="prev" href="../nlp/">
       
-        <link rel="next" href="nlpb/">
+      
+        <link rel="next" href="../openai/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
     
     
       
-        <title>NLP Concepts - GenAI Learning Notes</title>
+        <title>Prompts - GenAI Learning Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -64,9 +66,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#building-blocks" class="md-skip">
+        <a href="#prompts" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +110,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="GenAI Learning Notes" class="md-header__button md-logo" aria-label="GenAI Learning Notes" data-md-component="logo">
+    <a href=".." title="GenAI Learning Notes" class="md-header__button md-logo" aria-label="GenAI Learning Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              NLP Concepts
+              Prompts
             
           </span>
         </div>
@@ -241,7 +243,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="GenAI Learning Notes" class="md-nav__button md-logo" aria-label="GenAI Learning Notes" data-md-component="logo">
+    <a href=".." title="GenAI Learning Notes" class="md-nav__button md-logo" aria-label="GenAI Learning Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -268,19 +270,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -294,10 +294,117 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Natural Language Processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NLP Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nlpb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NLP Modeling Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NLP Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GenAI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            GenAI
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -319,18 +426,18 @@
           
   
   <span class="md-ellipsis">
-    NLP Concepts
+    Prompts
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    NLP Concepts
+    Prompts
   </span>
   
 
@@ -350,94 +457,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#building-blocks" class="md-nav__link">
+  <a href="#prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Building Blocks
+      Prompts
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tokenization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tokenization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vectorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vectorization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vectorization">
+    <nav class="md-nav" aria-label="Prompts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bag-of-words" class="md-nav__link">
+  <a href="#completion-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Bag Of Words
+      Completion Prompts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#common-vectorization-options" class="md-nav__link">
+  <a href="#chat-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Vectorization Options
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Vectorization Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#n-grams" class="md-nav__link">
-    <span class="md-ellipsis">
-      N-Grams
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#topic-modeling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Topic Modeling
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Topic Modeling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#latent-semantic-analysis-lsa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Latent Semantic Analysis (LSA)
+      Chat Prompts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#latent-dirichlet-allocation-lda" class="md-nav__link">
+  <a href="#prompt-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Latent Dirichlet Allocation (LDA)
+      Prompt Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Examples
     </span>
   </a>
   
@@ -464,112 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="nlpb/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    NLP Modeling Basics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="nlp/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    NLP Models
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    GenAI
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            GenAI
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="prompts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Prompts
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="openai/" class="md-nav__link">
+      <a href="../openai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="local/" class="md-nav__link">
+      <a href="../local/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -636,94 +590,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#building-blocks" class="md-nav__link">
+  <a href="#prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Building Blocks
+      Prompts
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tokenization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tokenization
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vectorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vectorization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vectorization">
+    <nav class="md-nav" aria-label="Prompts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bag-of-words" class="md-nav__link">
+  <a href="#completion-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Bag Of Words
+      Completion Prompts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#common-vectorization-options" class="md-nav__link">
+  <a href="#chat-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Vectorization Options
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Vectorization Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#n-grams" class="md-nav__link">
-    <span class="md-ellipsis">
-      N-Grams
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#topic-modeling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Topic Modeling
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Topic Modeling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#latent-semantic-analysis-lsa" class="md-nav__link">
-    <span class="md-ellipsis">
-      Latent Semantic Analysis (LSA)
+      Chat Prompts
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#latent-dirichlet-allocation-lda" class="md-nav__link">
+  <a href="#prompt-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Latent Dirichlet Allocation (LDA)
+      Prompt Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Examples
     </span>
   </a>
   
@@ -752,112 +658,120 @@
   
 
 
-  <h1>NLP Concepts</h1>
+  <h1>Prompts</h1>
 
-<details class="abstract">
-<summary>Terminology</summary>
+<h2 id="prompts">Prompts</h2>
+<h3 id="completion-prompts">Completion Prompts</h3>
 <ul>
-<li><strong>Corpus</strong>: A large collection of text documents or spoken language data used for training and testing NLP models</li>
-<li><strong>Dimensionality</strong>: Number of dimensions in a word vector. A high-dimensional word vector would have many dimensions, allowing it to capture a wide range of characteristics and nuances of the word.</li>
-<li><strong><a href="./ml-nlpb/#embeddings">Embedding</a></strong>: Vectorization in multi dimensional space. To give tokens meaning, the model must be trained on them. This allows the model to learn the meanings of words and how they relate to other words. To achieve this, the word vectors are “embedded” into an embedding space.</li>
-<li><strong>Named Entity Recognition(NER)</strong>: A named entity is a “real-world object” that’s assigned a name – for example, a person, a country, a product or a book title. Also see <a href="./ml-nlpb/#spacy-ner">spaCy NER</a>.</li>
-<li><strong>Pipelines</strong>: The steps used for processing a document and extract the constituent <a href="#building-blocks">building blocks</a>. Also see <a href="./ml-nlpb/#spacy-pipelines">spaCy Pipelines</a></li>
-<li><strong>Stemming / Lemmatization</strong>: Reducing words to their base or root form to handle variations of the same word, such as singular/plural forms or verb tenses</li>
-<li><strong>Stopwords</strong>: Commonly used words (determinants, conjunctions, prepositions, pronouns, auxillary verbs etc.) in a language but do not carry much meaning or significance. </li>
-<li><strong><a href="#tokenization">Tokenization</a></strong>: The process of parsing a statement and representing them as the constituent words or punctuations.  For example, dividing text by whitespace is one common approach, but there are many others. The purpose of tokenization is to create a vocabulary from a corpus. Each token is assigned a unique id to represent it as a number. Also see <a href="./ml-nlpb/#with-spacy">spaCy Tokenization</a></li>
-<li><strong>Transformers</strong>: Deep learning models that are trained on vectors to understand the meaning of words and how they relate to each other.</li>
-<li><strong>Vector / Word Vector</strong>: Vector representation of a word in NLP. Each word vector can be thought of as a point in a multi-dimensional space, where each dimension represents a particular aspect or characteristic of the word. Combining all the dimensions in a vector allows the model to understand the word’s meaning and how it relates to other words.</li>
-<li><strong><a href="#vectorization">Vectorization</a></strong>: Machine learning models typically require the data/features to be numeric. The process of transforming non-numeric data such as tokens into numeric features is called vectorization. During vectorization, the unique ids in the tokens are assigned to randomly initialized n-dimensional vectors.</li>
-<li><strong>Vocabulary</strong>: Set of unique tokens found within the corpus</li>
+<li>Suitable for <mark><strong>single-turn tasks</strong></mark> where the model generates a response based on a single input prompt</li>
+<li>Conversation context/history and role seggregation is not essential</li>
+<li>Works well for content generation, summarization, question-answering etc.</li>
 </ul>
+<h3 id="chat-prompts">Chat Prompts</h3>
+<ul>
+<li>Designed for <mark><strong>multi-turn conversations</strong></mark> with multiple roles (user, assistant, system etc.)</li>
+<li>Maintains conversation context by processing the entire conversation history</li>
+<li>Ideal for chatbot applications and tasks requiring back-and-forth interactions</li>
+</ul>
+<h3 id="prompt-structure">Prompt Structure</h3>
+<ul>
+<li>Break down large prompts into steps<ul>
+<li>Use separate prompts if needed</li>
+</ul>
+</li>
+<li><strong>Context</strong>: Brief introduction or background information<ul>
+<li>Include topic, industry/field, relevant links, keywords, datasets etc.</li>
+<li>Constraints or restrictions</li>
+</ul>
+</li>
+<li><strong>Persona</strong>: Role or expertise/profession the prompt should use<ul>
+<li>Use phrases such as <code>Act as</code>, <code>Your role is to</code> etc.</li>
+<li>Add relevant details such as field of work, company name, time period, region etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Goal/Intent</strong>: Define what the prompt should do</p>
+<ul>
+<li>Describe objective<ul>
+<li>Use <mark><strong>action verbs</strong></mark> such as <code>Analyze</code>, <code>Generate</code>, <code>Simplify</code>, <code>Summarize</code> etc.</li>
+</ul>
+</li>
+<li>Mention any focus areas using phrases such as <code>Focus on</code> etc.</li>
+</ul>
+<details class="info">
+<summary>Useful Action Verbs</summary>
+<p>Analyze, Compare, Convert, Customize, Describe, Evaluate, Explain, Generate, Improve, Optimize, Organize, Proofread, Provide, Revise, Rewrite, Share, Simplify, Translate, Write,</p>
 </details>
-<h2 id="building-blocks">Building Blocks</h2>
+</li>
+<li>
+<p><strong>Output</strong></p>
 <ul>
-<li><strong>Tokenization:</strong> Breaking text into tokens (words, sentences, n-grams)</li>
-<li><strong>Stop-word removal:</strong> a/an/the</li>
-<li><strong>Stemming and lemmatization:</strong> root word and word relation detection</li>
-<li><strong>TF-IDF (Term Frequency Inverse Document Frequency):</strong> word importance/uniqueness with regards to a given document</li>
-<li><strong>Part-of-speech tagging:</strong> noun/verb/adjective</li>
-<li><strong>Noun Phrase Extraction:</strong></li>
-<li><strong>NER (Named Entity Recognition):</strong> person/organization/location</li>
-<li><strong>Spelling correction:</strong> "Santa Calra Country"</li>
-<li><strong>Word sense disambiguation:</strong> "Apple stock price"</li>
-<li><strong>Segmentation:</strong> "San Francisco City subway"</li>
-<li><strong>Language detection:</strong> "translate this page"</li>
-<li><strong>Sentiment Analysis:</strong></li>
+<li><strong>Audience</strong>: Layman, x year old, type of professional, demographics (age/gender/location) etc.</li>
+<li><strong>Tone</strong>: Formal, Business, Academic, Humorous etc.<ul>
+<li>As a Famous Personality e.g. Shakespeare, Tagore etc.</li>
 </ul>
-<h2 id="tokenization"><a href="./ml-nlpb/#tokenization">Tokenization</a></h2>
+</li>
+<li><strong>Other Specs</strong>: <ul>
+<li>Number of words, points, lines, paragraphs etc.: <ul>
+<li>Use no more than x words (lines)</li>
+<li>Summarize using x bullet points, numbered lists etc.</li>
+</ul>
+</li>
+<li>Output format with relevant details/templates: <ul>
+<li>Table with columns x, y and z</li>
+<li>Json with the following keys/structure</li>
+<li>Markdown with structured sections and headings</li>
+</ul>
+</li>
+<li>Provide step by step instructions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Validate</strong><ul>
+<li>Provide relevant sources and citations</li>
+</ul>
+</li>
+</ul>
+<h3 id="basic-examples">Basic Examples</h3>
 <ul>
-<li><strong>Character tokenization</strong> - Treats each character as a separate token</li>
-<li><strong>Word tokenization</strong> - Divides the text into individual words or even subwords</li>
-<li><strong>Subword tokenization</strong> - Combines the benefits of character and word tokenization by breaking down rare words into smaller units while keeping frequent words as unique entities.<ul>
-<li>Allows the model to handle complex words and misspellings while keeping the length of the inputs manageable.</li>
+<li><strong>Summarize</strong><ul>
+<li>Web Pages: Paste the link of the web page followed by the word <code>summarize</code></li>
+<li>Write a summary of the book xyz by abc</li>
+<li>Provide an overview of some event</li>
 </ul>
 </li>
-<li><strong>Sentence tokenization</strong> - Divides the text into individual sentences</li>
-</ul>
-<h2 id="vectorization"><a href="./ml-nlpb/#vectorization">Vectorization</a></h2>
-<h3 id="bag-of-words">Bag Of Words</h3>
-<p>This is the simplest vectorization technique and involves three operations:</p>
-<ul>
-<li>Tokenization: The input is represented as a list of its constituent words, disregarding grammar and word order.<ul>
-<li>It is called <code>bag of words</code> because the document's structure is lost — as if the words are all jumbled up in a bag.</li>
+<li><strong>Compare</strong><ul>
+<li>Compare and contrast the concepts of (or the words ..) a and b</li>
 </ul>
 </li>
-<li>Vocabulary creation: Of all the obtained tokenized words, only unique words are selected to create the vocabulary.<ul>
-<li>CountVectorizer creates a dictionary called <code>vocabulary_</code> that converts each word to its index in the sparse matrix.</li>
+<li><strong>Explain/Describe</strong> <ul>
+<li>Explain the concept of xyz in simple terms</li>
+<li>Describe the top x abc</li>
 </ul>
 </li>
-<li>Vector creation: A sparse matrix is created out of the frequency of vocabulary words. In this sparse matrix, each row is a sentence vector whose length (the columns of the matrix) is equal to the size of the vocabulary.<ul>
-<li>The words are the features(columns) and the feature vectorization just involves marking the feature as a 0 or 1 depending on whether it appears in the document or not</li>
-<li>Another approach is to count the number of times each word (feature) appears in the document.</li>
-<li><mark>The vectorization will be mostly zeros, since only a few unique words are in each document.</mark><ul>
-<li><mark>For that reason, instead of storing all the zeros we only store non-zero values inside the 'sparse matrix' data structure.</mark></li>
+<li><strong>Generate</strong><ul>
+<li>Write a simple recipe for xyz</li>
+<li>Share x tips for abc</li>
 </ul>
 </li>
+<li><strong>Translate/Convert</strong><ul>
+<li>Translate the following from one language to another language</li>
+<li>Convert the following to xyz format</li>
 </ul>
 </li>
-</ul>
-<h3 id="common-vectorization-options">Common Vectorization Options</h3>
-<h4 id="n-grams">N-Grams</h4>
-<p>Allows us to specify whether a group of words should be considered as a single feature</p>
-<ul>
-<li>We can specify a lower and upper boundary of the range of n-values for different n-grams to be extracted</li>
-<li>Adds all word combinations as specified by the lower and upper boundaries<ul>
-<li>For example, lower=1, upper=2 will include al single and double word combinations (multiple word combinations are only for consecutive words)</li>
+<li><strong>Proofread</strong><ul>
+<li>Proofread and correct any errors in the following</li>
 </ul>
 </li>
-<li>When we produce n-grams from a document with  𝑊  words, we add a maximum of <span class="arithmatex">\(𝑛−𝑊+1\)</span> features. </li>
-<li>May lead to <code>feature explosion</code></li>
-</ul>
-<h2 id="topic-modeling"><a href="https://colab.research.google.com/drive/17zJbut8FVMEGr9ElmaZ-ZVciqs60cXnT#scrollTo=XYXIAevyELc3">Topic Modeling</a></h2>
-<p>A frequently used approach to discover hidden semantic patterns portrayed by a text corpus and automatically identify topics that exist inside it.</p>
-<ul>
-<li>A type of statistical modeling that leverages <code>unsupervised machine learning</code> to analyze and identify clusters or groups of similar words within a body of text.</li>
-<li>Topics are the latent descriptions of a corpus of text<ul>
-<li>Documents related to a specific topic are more likely to produce certain words more frequently</li>
+<li><strong>Follow up Instructions</strong>: Additional prompts to make changes to initial output<ul>
+<li>Provide x alternate versions for </li>
+<li>Make the content more/less xyz</li>
+<li>Incorporate xyz to make the output more abc</li>
+<li>Add more details / expand on xyz </li>
+<li>Focus on xyz</li>
 </ul>
 </li>
-<li>Two popular topic modeling techniques:  <strong>Latent Semantic Analysis (LSA)</strong> and <strong>Latent Dirichlet Allocation (LDA)</strong></li>
-</ul>
-<h3 id="latent-semantic-analysis-lsa">Latent Semantic Analysis (LSA)</h3>
-<p>A natural language processing technique used to analyze relationships between documents and the terms they contain. </p>
-<ul>
-<li>Assumes words with similar meanings will appear in similar documents. </li>
-<li>Constructs a matrix containing the word counts per document, where each row represents a unique word, and columns represent each document</li>
-<li>Uses <mark>Singular Value Decomposition (SVD)</mark> to reduce the number of rows while preserving the similarity structure among columns</li>
-<li>Cosine similarity is used to determine the similarity between documents<ul>
-<li>A value close to 1 means the documents are very similar based on the words in them</li>
-<li>A value close to 0 means they're quite different</li>
-</ul>
-</li>
-</ul>
-<h3 id="latent-dirichlet-allocation-lda">Latent Dirichlet Allocation (LDA)</h3>
-<p>A natural language technique used to identify topics a document belongs to based on the words contained within it.</p>
-<ul>
-<li>It is a Bayesian network i.e., it’s a generative statistical model that assumes documents are made up of words that aid in determining the topics</li>
-<li>Documents are mapped to a list of topics by assigning each word in the document to different topics</li>
-<li>This model ignores the order of words occurring in a document and treats them as a <a href="#bag-of-words">bag of words</a></li>
 </ul>
 
 
@@ -917,10 +831,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link", "content.code.copy", "navigation.top"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link", "content.code.copy", "navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

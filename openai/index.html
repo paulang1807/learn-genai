@@ -12,10 +12,10 @@
         <meta name="author" content="Angshuman Paul">
       
       
-        <link rel="canonical" href="https://paulang1807.github.io/learn-genai/genai/">
+        <link rel="canonical" href="https://paulang1807.github.io/learn-genai/openai/">
       
       
-        <link rel="prev" href="../nlp/">
+        <link rel="prev" href="../prompts/">
       
       
         <link rel="next" href="../local/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>GenAI Basics - GenAI Learning Notes</title>
+        <title>OpenAI - GenAI Learning Notes</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#prompts" class="md-skip">
+        <a href="#openai" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GenAI Basics
+              OpenAI
             
           </span>
         </div>
@@ -270,19 +270,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -296,7 +294,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Natural Language Processing
@@ -366,6 +364,71 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GenAI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            GenAI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
               
                 
   
@@ -384,7 +447,7 @@
           
   
   <span class="md-ellipsis">
-    GenAI Basics
+    OpenAI
   </span>
   
 
@@ -395,7 +458,7 @@
         
   
   <span class="md-ellipsis">
-    GenAI Basics
+    OpenAI
   </span>
   
 
@@ -413,39 +476,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prompts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prompts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prompts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#completion-prompts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Completion Prompts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chat-prompts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chat Prompts
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#openai" class="md-nav__link">
@@ -518,39 +548,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prompts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prompts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prompts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#completion-prompts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Completion Prompts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chat-prompts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chat Prompts
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#openai" class="md-nav__link">
     <span class="md-ellipsis">
       OpenAI
@@ -577,21 +574,8 @@
   
 
 
-  <h1>GenAI Basics</h1>
+  <h1>OpenAI</h1>
 
-<h2 id="prompts">Prompts</h2>
-<h3 id="completion-prompts">Completion Prompts</h3>
-<ul>
-<li>Suitable for <mark><strong>single-turn tasks</strong></mark> where the model generates a response based on a single input prompt</li>
-<li>Conversation context/history and role seggregation is not essential</li>
-<li>Works well for content generation, summarization, question-answering etc.</li>
-</ul>
-<h3 id="chat-prompts">Chat Prompts</h3>
-<ul>
-<li>Designed for <mark><strong>multi-turn conversations</strong></mark> with multiple roles (user, assistant, system etc.)</li>
-<li>Maintains conversation context by processing the entire conversation history</li>
-<li>Ideal for chatbot applications and tasks requiring back-and-forth interactions</li>
-</ul>
 <h2 id="openai">OpenAI</h2>
 <div class="admonition info">
 <p class="admonition-title">API Parameters</p>
