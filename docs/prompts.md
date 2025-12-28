@@ -9,6 +9,8 @@
 ### Chat Prompts
 
 - Designed for ==**multi-turn conversations**== with multiple roles (user, assistant, system etc.)
+    - **System prompt** - indicates what task the AI is performing and what tone it should use
+    - **User prompt** - the prompt from user that the AI should reply to
 - Maintains conversation context by processing the entire conversation history
 - Ideal for chatbot applications and tasks requiring back-and-forth interactions
 
