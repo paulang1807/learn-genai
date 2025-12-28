@@ -163,7 +163,7 @@ The most commonly used prompts are `text_qa_template` (1) and `refine_template` 
         ```
 
 ### [LangChain](https://www.langchain.com/)
-#### Implementation Steps
+#### Implementation Steps Using LlamaFile
 - Install required packages
 ```bash
 pip install -U langchain langchain-openai langchain-community
