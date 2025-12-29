@@ -104,3 +104,5 @@
     - Incorporate xyz to make the output more abc
     - Add more details / expand on xyz 
     - Focus on xyz
+
+See [Prompt Samples](../prompt-samples) for more examples

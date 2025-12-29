@@ -90,7 +90,10 @@ nav:
     - NLP Models: nlp.md
   - GenAI:
     - Concepts: concepts.md
-    - Prompts: prompts.md
+    - Prompts: 
+      - Overview: prompts.md
+      - Samples: prompt-samples.md
     - Frameworks: frameworks.md
     - Agents: agents.md
     - Local Execution: local.md
+    - Notebooks: notebooks/index.md
