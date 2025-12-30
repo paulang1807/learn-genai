@@ -1,6 +1,29 @@
 
 ## Local LLMs
 
+### [Ollama](https://ollama.com)
+#### Setup
+
+- [Download Ollama](https://ollama.com/download)
+- Download model
+    - Search for the desired model and go to the corresponding page
+        - The `dolphin` models are uncensored (search for dolphin)
+	- Click on the desired version, copy the cli command and execute in the terminal 
+        - Make sure you have enough RAM for the LLM to work 
+        - ==**Memory should be roughly equal to the size of the model**==
+        ![Llama 3.1 download](img/ollama_model_example.png)
+    - Once the terminal command executes we are ready to start using the LLM locally
+        - When we run the 'ollama run' command for a model for the first time, it is downloaded in the `~/.ollama/models/manifests/registry.ollama.ai/library` folder in Mac
+
+??? info "Useful Commands"
+    | Command | Description |
+    | :---------- |:-------------------------------------------------- |
+    | /bye  (or Ctrl D)	| quit interacting with the LLM |
+    | ollama | Lists all available commands |
+    | ollama list | Lists the models available for use |
+    | ollama run <model_name> | To run the model |
+    | ollama serve | To start a local server[^1] |
+    
 ### [LlamaFile](https://github.com/Mozilla-Ocho/llamafile)
 #### Setup
 - Download the `TinyLlama Llamfile from the [Other example llamafiles](https://github.com/Mozilla-Ocho/llamafile/tree/main?tab=readme-ov-file#other-example-llamafiles) section
@@ -95,6 +118,7 @@ The most commonly used prompts are `text_qa_template` (1) and `refine_template` 
 1. :bulb: Used to get an initial answer to a query using retrieved nodes
 2. :bulb: Used when the retrieved text does not fit into a single LLM call with `response_mode="compact"` (the default), or when more than one node is retrieved using `response_mode="refine"`
     - The answer from the first query is inserted as an existing_answer, and the LLM must update or repeat the existing answer based on the new context.
+3. :bulb: This will show the ip and port of the server which can then be used as an endpoint to interact with the LLM.
 
 ??? abstract "Sample Code with Custom Prompts"
     === "Completion Prompts"
@@ -272,3 +296,8 @@ pip install -U langchain langchain-openai langchain-community
             ```
 
 *[prompt templates]: A predefined structure that combines static text with dynamic user inputs. This allows developers to create prompts that are not only contextually rich but also tailored to specific tasks.
+
+[^1]:
+    This will show the ip and port of the server which can then be used as an endpoint to interact with the LLM.
+    
+     - If it shows the error: `Error: listen tcp 127.0.0.1:11434: bind: address already in use`, it means that ollama is already running at port 11434

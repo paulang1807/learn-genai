@@ -21,6 +21,8 @@ theme:
     - content.code.copy
     # Adds a 'Back to top' button when scrolling up
     - navigation.top
+    # Allows adding footnotes
+    - content.footnote.tooltips
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -81,6 +83,7 @@ markdown_extensions:
   - tables
   # Use for tooltips (https://squidfunk.github.io/mkdocs-material/reference/tooltips/)
   - abbr
+  - footnotes
 
 # Page tree
 nav:
