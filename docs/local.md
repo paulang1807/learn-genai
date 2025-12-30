@@ -15,6 +15,7 @@
     - Once the terminal command executes we are ready to start using the LLM locally
         - When we run the 'ollama run' command for a model for the first time, it is downloaded in the `~/.ollama/models/manifests/registry.ollama.ai/library` folder in Mac
 
+<p id="cust-id-ollama-comm"></p>
 ??? info "Useful Commands"
     | Command | Description |
     | :---------- |:-------------------------------------------------- |
@@ -24,6 +25,8 @@
     | ollama run <model_name> | To run the model |
     | ollama serve | To start a local server[^1] |
     
+Also see [Ollama Prompting in Python](../prompt-code/#ollama)
+
 ### [LlamaFile](https://github.com/Mozilla-Ocho/llamafile)
 #### Setup
 - Download the `TinyLlama Llamfile from the [Other example llamafiles](https://github.com/Mozilla-Ocho/llamafile/tree/main?tab=readme-ov-file#other-example-llamafiles) section
@@ -299,5 +302,5 @@ pip install -U langchain langchain-openai langchain-community
 
 [^1]:
     This will show the ip and port of the server which can then be used as an endpoint to interact with the LLM.
-    
+
      - If it shows the error: `Error: listen tcp 127.0.0.1:11434: bind: address already in use`, it means that ollama is already running at port 11434
