@@ -12,25 +12,31 @@
         <meta name="author" content="Angshuman Paul">
       
       
+        <link rel="canonical" href="https://paulang1807.github.io/learn-genai/concepts/">
       
+      
+        <link rel="prev" href="../nlp/">
+      
+      
+        <link rel="next" href="../prompts/">
       
       
         
       
       
-      <link rel="icon" href="/learn-genai/assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>GenAI Learning Notes</title>
+        <title>Concepts - GenAI Learning Notes</title>
       
     
     
-      <link rel="stylesheet" href="/learn-genai/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/learn-genai/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -65,9 +71,9 @@
       
     
     
-      <link rel="stylesheet" href="/learn-genai/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/learn-genai/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -91,6 +97,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#custom-gpts" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +114,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/learn-genai/." title="GenAI Learning Notes" class="md-header__button md-logo" aria-label="GenAI Learning Notes" data-md-component="logo">
+    <a href=".." title="GenAI Learning Notes" class="md-header__button md-logo" aria-label="GenAI Learning Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -123,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Concepts
             
           </span>
         </div>
@@ -239,7 +250,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/learn-genai/." title="GenAI Learning Notes" class="md-nav__button md-logo" aria-label="GenAI Learning Notes" data-md-component="logo">
+    <a href=".." title="GenAI Learning Notes" class="md-nav__button md-logo" aria-label="GenAI Learning Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -316,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/learn-genai/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -344,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/learn-genai/nlpb/" class="md-nav__link">
+      <a href="../nlpb/" class="md-nav__link">
         
   
   
@@ -372,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/learn-genai/nlp/" class="md-nav__link">
+      <a href="../nlp/" class="md-nav__link">
         
   
   
@@ -404,18 +415,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -436,7 +449,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -451,10 +464,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/learn-genai/concepts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -470,6 +508,85 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#custom-gpts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom GPTs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLMs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLMs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Training
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-augmented-generation-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieval Augmented Generation (RAG)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -529,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/learn-genai/prompts/" class="md-nav__link">
+      <a href="../prompts/" class="md-nav__link">
         
   
   
@@ -557,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/learn-genai/prompt-samples/" class="md-nav__link">
+      <a href="../prompt-samples/" class="md-nav__link">
         
   
   
@@ -593,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/learn-genai/frameworks/" class="md-nav__link">
+      <a href="../frameworks/" class="md-nav__link">
         
   
   
@@ -621,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/learn-genai/agents/" class="md-nav__link">
+      <a href="../agents/" class="md-nav__link">
         
   
   
@@ -649,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/learn-genai/local/" class="md-nav__link">
+      <a href="../local/" class="md-nav__link">
         
   
   
@@ -677,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/learn-genai/notebooks/index.md" class="md-nav__link">
+      <a href="../notebooks/index.md" class="md-nav__link">
         
   
   
@@ -723,6 +840,75 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#custom-gpts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom GPTs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLMs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLMs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Training
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieval-augmented-generation-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retrieval Augmented Generation (RAG)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -734,8 +920,183 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+  <h1>Concepts</h1>
+
+<div class="admonition abstract">
+<p class="admonition-title">Terminology</p>
+<ul>
+<li><strong>GPT</strong>: Generative Pre-Trained Transformers</li>
+<li><strong>GAN</strong>: Generative Adversarial Networks</li>
+<li><strong>VAE</strong>: Variational Autoencoders (Used in anomaly detection)</li>
+<li><strong>RLHF</strong>: Reinforcement Learning Human Feedback</li>
+<li><strong>RAG</strong>: Retrieval Augmented Generation</li>
+<li><strong>Multimodal AI</strong>: Allows inputs from muliple modalities (i.e. different types of data) such as images, video, audio and text</li>
+</ul>
+</div>
+<h2 id="custom-gpts">Custom GPTs</h2>
+<ul>
+<li>Creating customized GPTs by pre-setting instructions<ul>
+<li>Can be reused without having to repeat the instructions</li>
+<li>Can be invoked using mentions</li>
+</ul>
+</li>
+</ul>
+<h2 id="llms">LLMs</h2>
+<h3 id="api-parameters">API Parameters</h3>
+<ul>
+<li><strong>Max Tokens</strong>: Determines the maximum number of tokens that can be generated. This parameter helps control the verbosity of the response. The value typically ranges between 0 and 2048, though it can vary depending on the model and context.</li>
+<li><strong>Temperature</strong>: Controls the randomness of the output. It influences how creative (less predictive responses) or deterministic (more predictive responses) the responses are. The value ranges between 0 and 2. <mark>The default value is 0.8.</mark></li>
+<li><strong>Top P (Nucleus Sampling)</strong>: Dictates the variety in responses by only considering the top ‘P’ percent of probable words. It is an alternative to sampling with temperature and controls the diversity of the generated text. The value ranges between 0 and 1. <mark>The default value is 0.95.</mark></li>
+<li><strong>Frequency Penalty</strong>: Reduces repetition by decreasing the likelihood of frequently used words. It penalizes new tokens based on their existing frequency in the text so far. The value ranges between -2.0 and 2.0. This setting is disabled by default (value 0)</li>
+<li><strong>Presence Penalty</strong>: Promotes the introduction of new topics in the conversation. It penalizes new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics. The value ranges between -2.0 and 2.0. Positive values encourage diverse ideas and minimize repetition. This setting is disabled by default (value 0)</li>
+</ul>
+<details class="note">
+<summary>Temperature and Top P sample values</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Use Case</th>
+<th style="text-align: center;">Temperature</th>
+<th style="text-align: center;">Top P</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Chatbot</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: left;">Generates responses that balance coherence and diversity resulting in a more natural and engaging conversational tone.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Code Generation</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">0.1</td>
+<td style="text-align: left;">Generates code that adheres to established patterns and conventions. Code output is more focussed and syntactically correct.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Code Comment Generation</td>
+<td style="text-align: center;">0.3</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: left;">Generates concise and relevant code comments that adhere to conventions.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Creative Writing</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.8</td>
+<td style="text-align: left;">Generates creative and diverse text less constrained by patterns.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Data Analysis Scripting</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: center;">0.1</td>
+<td style="text-align: left;">Generates focussed, efficient and correct analysis scripts.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exploratory Code Writing</td>
+<td style="text-align: center;">0.6</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: left;">Generates creative code that considers and explores multiple solutions.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="training">Training</h3>
+<ul>
+<li>Three phases of training:<ul>
+<li><strong>Pre Training</strong> <ul>
+<li>Model is trained on large volumes of text</li>
+<li>Results in the creation of a parameter file <ul>
+<li>For example the LLama2 model is trained on 10 TB of trxt and produces a compressed 140 GB parameter file. </li>
+</ul>
+</li>
+<li><mark>Open source LLMs have a run file in addition to the parameter file.</mark><ul>
+<li>The run file contains some code to run the parameter file.<ul>
+<li>Written in C or Python</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Fine Tuning</strong> <ul>
+<li>LLMs can be fine tuned with hundreds of thousands (roughly 100,000 in general) of high-quality prompts and completions (questions and expected answers)</li>
+<li>Enhances the model's efficiency </li>
+<li>Allows models to respond without hallucinations</li>
+<li>Allows superior results with less input and potentially using smaller models</li>
+<li>ChatGPT uses the SGD optmizer (Stoichastic Gradient Descent) for fine tuning</li>
+</ul>
+</li>
+<li><strong>Reinforcement Training</strong> <ul>
+<li>Let the model know how good the response is and the model learns based on the feedback.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="retrieval-augmented-generation-rag">Retrieval Augmented Generation (RAG)</h2>
+<ul>
+<li>Components for RAG Implementation<ul>
+<li>Document Ingestion<ul>
+<li>Ingestion</li>
+<li>Transformation and Storage <ul>
+<li>Required to handle the <code>context size</code> limitations of the LLMs<ul>
+<li>Once the LLM reaches the limit, it is not going to remember the previous content that was discussed with it</li>
+</ul>
+</li>
+<li>Transformation involves <strong>Splitting</strong> the input into Chunks</li>
+<li><strong>Embedding</strong> <ul>
+<li>Input is converted to tokens which are then conversion to Vectors</li>
+<li>Retains some reference to the original content the embeddings were created from</li>
+<li>Aids in <mark><strong><abbr title="Embeddings from user query used to search vector store for similar vector embeddings">Similarity Search</abbr></strong></mark></li>
+</ul>
+</li>
+<li>Storage in <strong>Vector Database</strong> (FAISS, ChromaDB, AstraDB etc.)<ul>
+<li>Vector embeddings stored as clusters in 3d space</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>User Query and Response<ul>
+<li>User query<ul>
+<li>Create embdedings from query using the same embedding model</li>
+</ul>
+</li>
+<li>Pre defined prompt</li>
+<li><mark><strong>Retrieval Chain</strong></mark><ul>
+<li>Interface for querying Vector Store DB</li>
+<li>Perform <abbr title="Embeddings from user query used to search vector store for similar vector embeddings">Similarity Search</abbr></li>
+</ul>
+</li>
+<li>Prompt + User Query + Enhanced context from Retrieval Chain sent to LLM</li>
+<li>Response from LLM</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -784,10 +1145,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/learn-genai/", "features": ["content.tabs.link", "content.code.copy", "navigation.top"], "search": "/learn-genai/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link", "content.code.copy", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/learn-genai/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

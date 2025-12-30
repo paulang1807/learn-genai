@@ -15,41 +15,46 @@
         <link rel="canonical" href="https://paulang1807.github.io/learn-genai/prompts/">
       
       
-        <link rel="prev" href="../nlp/">
+        <link rel="prev" href="../concepts/">
       
       
-        <link rel="next" href="../openai/">
+        <link rel="next" href="../prompt-samples/">
+      
+      
+        
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Prompts - GenAI Learning Notes</title>
+        <title>Overview - GenAI Learning Notes</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
   
     
+      
+      
     
   
   
-  <style>:root{--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm32 64h192c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32m32 160a32 32 0 1 1-64 0 32 32 0 1 1 64 0M96 352a32 32 0 1 1 0-64 32 32 0 1 1 0 64m-32 64c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32m128-160a32 32 0 1 1 0-64 32 32 0 1 1 0 64m32 64a32 32 0 1 1-64 0 32 32 0 1 1 64 0m64-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64m32 64a32 32 0 1 1-64 0 32 32 0 1 1 64 0m-32 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64"/></svg>');}</style>
+  <style>:root{--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20384%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%207.1.0%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%200C28.7%200%200%2028.7%200%2064v384c0%2035.3%2028.7%2064%2064%2064h256c35.3%200%2064-28.7%2064-64V64c0-35.3-28.7-64-64-64zm32%2064h192c17.7%200%2032%2014.3%2032%2032v32c0%2017.7-14.3%2032-32%2032H96c-17.7%200-32-14.3-32-32V96c0-17.7%2014.3-32%2032-32m16%20168a24%2024%200%201%201-48%200%2024%2024%200%201%201%2048%200m80%2024a24%2024%200%201%201%200-48%2024%2024%200%201%201%200%2048m128-24a24%2024%200%201%201-48%200%2024%2024%200%201%201%2048%200M88%20352a24%2024%200%201%201%200-48%2024%2024%200%201%201%200%2048m128-24a24%2024%200%201%201-48%200%2024%2024%200%201%201%2048%200m80%2024a24%2024%200%201%201%200-48%2024%2024%200%201%201%200%2048M64%20424c0-13.3%2010.7-24%2024-24h112c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024H88c-13.3%200-24-10.7-24-24m232-24c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024-24-10.7-24-24%2010.7-24%2024-24%22/%3E%3C/svg%3E');}</style>
 
 
   
   
   
   
-  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>');}</style>
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
 
 
     
@@ -72,7 +77,6 @@
     
       
 
-    
     
     
   </head>
@@ -130,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prompts
+              Overview
             
           </span>
         </div>
@@ -168,11 +172,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -204,13 +210,14 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/paulang1807/learn-genai" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     Github
@@ -256,7 +263,7 @@
       <a href="https://github.com/paulang1807/learn-genai" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     Github
@@ -276,6 +283,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -286,9 +294,16 @@
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Natural Language Processing
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -297,7 +312,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
-            Natural Language Processing
+            
+  
+    Natural Language Processing
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -311,9 +330,16 @@
       <a href=".." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     NLP Concepts
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -332,9 +358,16 @@
       <a href="../nlpb/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     NLP Modeling Basics
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -353,9 +386,16 @@
       <a href="../nlp/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     NLP Models
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -383,6 +423,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -393,9 +434,16 @@
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     GenAI
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -404,7 +452,88 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            GenAI
+            
+  
+    GenAI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prompts
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -425,9 +554,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
-    Prompts
+    
+  
+    Overview
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -436,9 +572,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
-    Prompts
+    
+  
+    Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -459,7 +602,9 @@
         <li class="md-nav__item">
   <a href="#prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Prompts
+      
+        Prompts
+      
     </span>
   </a>
   
@@ -469,7 +614,9 @@
           <li class="md-nav__item">
   <a href="#completion-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Completion Prompts
+      
+        Completion Prompts
+      
     </span>
   </a>
   
@@ -478,7 +625,9 @@
           <li class="md-nav__item">
   <a href="#chat-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Prompts
+      
+        Chat Prompts
+      
     </span>
   </a>
   
@@ -487,7 +636,9 @@
           <li class="md-nav__item">
   <a href="#prompt-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Prompt Structure
+      
+        Prompt Structure
+      
     </span>
   </a>
   
@@ -496,7 +647,9 @@
           <li class="md-nav__item">
   <a href="#basic-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Examples
+      
+        Basic Examples
+      
     </span>
   </a>
   
@@ -523,12 +676,83 @@
   
   
     <li class="md-nav__item">
-      <a href="../openai/" class="md-nav__link">
+      <a href="../prompt-samples/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    OpenAI
+    
+  
+    Samples
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frameworks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frameworks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agents
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -547,9 +771,44 @@
       <a href="../local/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Local Execution
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notebooks/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebooks
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -592,7 +851,9 @@
         <li class="md-nav__item">
   <a href="#prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Prompts
+      
+        Prompts
+      
     </span>
   </a>
   
@@ -602,7 +863,9 @@
           <li class="md-nav__item">
   <a href="#completion-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Completion Prompts
+      
+        Completion Prompts
+      
     </span>
   </a>
   
@@ -611,7 +874,9 @@
           <li class="md-nav__item">
   <a href="#chat-prompts" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Prompts
+      
+        Chat Prompts
+      
     </span>
   </a>
   
@@ -620,7 +885,9 @@
           <li class="md-nav__item">
   <a href="#prompt-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Prompt Structure
+      
+        Prompt Structure
+      
     </span>
   </a>
   
@@ -629,7 +896,9 @@
           <li class="md-nav__item">
   <a href="#basic-examples" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Examples
+      
+        Basic Examples
+      
     </span>
   </a>
   
@@ -650,15 +919,17 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
+
   
   
 
 
-  <h1>Prompts</h1>
+  <h1>Overview</h1>
 
 <h2 id="prompts">Prompts</h2>
 <h3 id="completion-prompts">Completion Prompts</h3>
@@ -669,29 +940,40 @@
 </ul>
 <h3 id="chat-prompts">Chat Prompts</h3>
 <ul>
-<li>Designed for <mark><strong>multi-turn conversations</strong></mark> with multiple roles (user, assistant, system etc.)</li>
+<li>Designed for <mark><strong>multi-turn conversations</strong></mark> with multiple roles (user, assistant, system etc.)<ul>
+<li><strong>System prompt</strong> - indicates what task the AI is performing and what tone it should use</li>
+<li><strong>User prompt</strong> - the prompt from user that the AI should reply to</li>
+</ul>
+</li>
 <li>Maintains conversation context by processing the entire conversation history</li>
 <li>Ideal for chatbot applications and tasks requiring back-and-forth interactions</li>
 </ul>
 <h3 id="prompt-structure">Prompt Structure</h3>
 <ul>
-<li>Break down large prompts into steps<ul>
-<li>Use separate prompts if needed</li>
+<li>
+<p>Break down large prompts into steps</p>
+<ul>
+<li>
+<p>Use <strong>delimiters</strong> for organizing the prompt</p>
+<details class="tip">
+<summary>Stop Sequences</summary>
+<ul>
+<li>Can be used to signal the end of an example in <mark><strong>few-shot prompting</strong></mark> </li>
+<li>Helps to structure the input data for the model</li>
+<li>Triple backticks, quotes, double hashtags etc.</li>
 </ul>
-</li>
-<li><strong>Context</strong>: Brief introduction or background information<ul>
-<li>Include topic, industry/field, relevant links, keywords, datasets etc.</li>
-<li>Constraints or restrictions</li>
-</ul>
-</li>
-<li><strong>Persona</strong>: Role or expertise/profession the prompt should use<ul>
-<li>Use phrases such as <code>Act as</code>, <code>Your role is to</code> etc.</li>
-<li>Add relevant details such as field of work, company name, time period, region etc.</li>
-</ul>
+</details>
 </li>
 <li>
-<p><strong>Goal/Intent</strong>: Define what the prompt should do</p>
-<ul>
+<p>Break large prompts into "sub-prompts" if needed</p>
+</li>
+<li><strong>Context</strong>: Brief introduction or background information</li>
+<li>Include topic, industry/field, relevant links, keywords, datasets, text chunks etc.</li>
+<li>Constraints or restrictions</li>
+<li><strong>Persona</strong>: Role or expertise/profession the prompt should use</li>
+<li>Use phrases such as <code>Act as</code>, <code>Your role is to</code>, <code>Imagine you are</code> etc.</li>
+<li>Add relevant details such as field of work, company name, time period, region etc.</li>
+<li><strong>Goal/Intent</strong>: Define what the prompt should do</li>
 <li>Describe objective<ul>
 <li>Use <mark><strong>action verbs</strong></mark> such as <code>Analyze</code>, <code>Generate</code>, <code>Simplify</code>, <code>Summarize</code> etc.</li>
 </ul>
@@ -699,20 +981,29 @@
 <li>Mention any focus areas using phrases such as <code>Focus on</code> etc.</li>
 </ul>
 <details class="info">
-<summary>Useful Action Verbs</summary>
-<p>Analyze, Compare, Convert, Customize, Describe, Evaluate, Explain, Generate, Improve, Optimize, Organize, Proofread, Provide, Revise, Rewrite, Share, Simplify, Translate, Write,</p>
+<summary>Useful Action Verbs and Adjectives</summary>
+<ul>
+<li><strong>Verbs</strong><ul>
+<li>Analyze, Compare, Convert, Customize, Describe, Evaluate, Explain, Generate, Improve, Optimize, Organize, Proofread, Provide, Revise, Rewrite, Share, Simplify, Translate, Write</li>
+</ul>
+</li>
+<li><strong>Adjectives</strong><ul>
+<li>Clear, Concise, Conversational, Professional</li>
+</ul>
+</li>
+</ul>
 </details>
 </li>
 <li>
 <p><strong>Output</strong></p>
 <ul>
 <li><strong>Audience</strong>: Layman, x year old, type of professional, demographics (age/gender/location) etc.</li>
-<li><strong>Tone</strong>: Formal, Business, Academic, Humorous etc.<ul>
+<li><strong>Tone</strong>: Formal, Business, Casual, Academic, Humorous etc.<ul>
 <li>As a Famous Personality e.g. Shakespeare, Tagore etc.</li>
 </ul>
 </li>
 <li><strong>Other Specs</strong>: <ul>
-<li>Number of words, points, lines, paragraphs etc.: <ul>
+<li>Specify constraints (Number of words, points, lines, paragraphs etc.): <ul>
 <li>Use no more than x words (lines)</li>
 <li>Summarize using x bullet points, numbered lists etc.</li>
 </ul>
@@ -724,8 +1015,17 @@
 </ul>
 </li>
 <li>Provide step by step instructions</li>
+<li>Ask for additional details <ul>
+<li>examples and/or analogies</li>
+<li>for and against arguments</li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Clarify</strong>: Ask the prompt to ask clarification questions if needed<ul>
+<li>Ask me questions (one at a time) to (add relevant text based on the ask)</li>
 </ul>
 </li>
 <li><strong>Validate</strong><ul>
@@ -733,8 +1033,22 @@
 </ul>
 </li>
 </ul>
+<details class="tip">
+<summary>Code chunks in Prompts</summary>
+<p>Include code chunks in a prompt by enclosing them in single backticks followed by the name of the language:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Some text
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>`python
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>some python code
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>`
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>More text
+</span></code></pre></div></p>
+</details>
 <h3 id="basic-examples">Basic Examples</h3>
 <ul>
+<li><strong>Provide context</strong><ul>
+<li>Here is some information to include in /for reference</li>
+</ul>
+</li>
 <li><strong>Summarize</strong><ul>
 <li>Web Pages: Paste the link of the web page followed by the word <code>summarize</code></li>
 <li>Write a summary of the book xyz by abc</li>
@@ -747,12 +1061,14 @@
 </li>
 <li><strong>Explain/Describe</strong> <ul>
 <li>Explain the concept of xyz in simple terms</li>
+<li>Explain the concept of xyz using abc analogy</li>
 <li>Describe the top x abc</li>
 </ul>
 </li>
 <li><strong>Generate</strong><ul>
 <li>Write a simple recipe for xyz</li>
 <li>Share x tips for abc</li>
+<li>Help me brainstorm xyz</li>
 </ul>
 </li>
 <li><strong>Translate/Convert</strong><ul>
@@ -760,8 +1076,11 @@
 <li>Convert the following to xyz format</li>
 </ul>
 </li>
-<li><strong>Proofread</strong><ul>
+<li><strong>Proofread/Review</strong><ul>
 <li>Proofread and correct any errors in the following</li>
+<li>Rephrase/Structure the above for maximum impact</li>
+<li>Review the above and suggest areas for improvement in terms of tone and engagement</li>
+<li>Is there something I should add to make this resonate better?</li>
 </ul>
 </li>
 <li><strong>Follow up Instructions</strong>: Additional prompts to make changes to initial output<ul>
@@ -773,6 +1092,7 @@
 </ul>
 </li>
 </ul>
+<p>See <a href="../prompt-samples">Prompt Samples</a> for more examples</p>
 
 
 
@@ -831,10 +1151,13 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link", "content.code.copy", "navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link", "content.code.copy", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
