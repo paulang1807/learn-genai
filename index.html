@@ -1072,12 +1072,12 @@
 <ul>
 <li><strong>Corpus</strong>: A large collection of text documents or spoken language data used for training and testing NLP models</li>
 <li><strong>Dimensionality</strong>: Number of dimensions in a word vector. A high-dimensional word vector would have many dimensions, allowing it to capture a wide range of characteristics and nuances of the word.</li>
-<li><strong><a href="./ml-nlpb/#embeddings">Embedding</a></strong>: Vectorization in multi dimensional space. To give tokens meaning, the model must be trained on them. This allows the model to learn the meanings of words and how they relate to other words. To achieve this, the word vectors are “embedded” into an embedding space.</li>
-<li><strong>Named Entity Recognition(NER)</strong>: A named entity is a “real-world object” that’s assigned a name – for example, a person, a country, a product or a book title. Also see <a href="./ml-nlpb/#spacy-ner">spaCy NER</a>.</li>
-<li><strong>Pipelines</strong>: The steps used for processing a document and extract the constituent <a href="#building-blocks">building blocks</a>. Also see <a href="./ml-nlpb/#spacy-pipelines">spaCy Pipelines</a></li>
+<li><strong><a href="./nlpb/#embeddings">Embedding</a></strong>: Vectorization in multi dimensional space. To give tokens meaning, the model must be trained on them. This allows the model to learn the meanings of words and how they relate to other words. To achieve this, the word vectors are “embedded” into an embedding space.</li>
+<li><strong>Named Entity Recognition(NER)</strong>: A named entity is a “real-world object” that’s assigned a name – for example, a person, a country, a product or a book title. Also see <a href="./nlpb/#spacy-ner">spaCy NER</a>.</li>
+<li><strong>Pipelines</strong>: The steps used for processing a document and extract the constituent <a href="#building-blocks">building blocks</a>. Also see <a href="./nlpb/#spacy-pipelines">spaCy Pipelines</a></li>
 <li><strong>Stemming / Lemmatization</strong>: Reducing words to their base or root form to handle variations of the same word, such as singular/plural forms or verb tenses</li>
 <li><strong>Stopwords</strong>: Commonly used words (determinants, conjunctions, prepositions, pronouns, auxillary verbs etc.) in a language but do not carry much meaning or significance. </li>
-<li><strong><a href="#tokenization">Tokenization</a></strong>: The process of parsing a statement and representing them as the constituent words or punctuations.  For example, dividing text by whitespace is one common approach, but there are many others. The purpose of tokenization is to create a vocabulary from a corpus. Each token is assigned a unique id to represent it as a number. Also see <a href="./ml-nlpb/#with-spacy">spaCy Tokenization</a></li>
+<li><strong><a href="#tokenization">Tokenization</a></strong>: The process of parsing a statement and representing them as the constituent words or punctuations.  For example, dividing text by whitespace is one common approach, but there are many others. The purpose of tokenization is to create a vocabulary from a corpus. Each token is assigned a unique id to represent it as a number. Also see <a href="./nlpb/#with-spacy">spaCy Tokenization</a></li>
 <li><strong>Transformers</strong>: Deep learning models that are trained on vectors to understand the meaning of words and how they relate to each other.</li>
 <li><strong>Vector / Word Vector</strong>: Vector representation of a word in NLP. Each word vector can be thought of as a point in a multi-dimensional space, where each dimension represents a particular aspect or characteristic of the word. Combining all the dimensions in a vector allows the model to understand the word’s meaning and how it relates to other words.</li>
 <li><strong><a href="#vectorization">Vectorization</a></strong>: Machine learning models typically require the data/features to be numeric. The process of transforming non-numeric data such as tokens into numeric features is called vectorization. During vectorization, the unique ids in the tokens are assigned to randomly initialized n-dimensional vectors.</li>
@@ -1099,17 +1099,18 @@
 <li><strong>Language detection:</strong> "translate this page"</li>
 <li><strong>Sentiment Analysis:</strong></li>
 </ul>
-<h2 id="tokenization"><a href="./ml-nlpb/#tokenization">Tokenization</a></h2>
+<h2 id="tokenization"><a href="./nlpb/#tokenization">Tokenization</a></h2>
 <ul>
 <li><strong>Character tokenization</strong> - Treats each character as a separate token</li>
 <li><strong>Word tokenization</strong> - Divides the text into individual words or even subwords</li>
 <li><strong>Subword tokenization</strong> - Combines the benefits of character and word tokenization by breaking down rare words into smaller units while keeping frequent words as unique entities.<ul>
 <li>Allows the model to handle complex words and misspellings while keeping the length of the inputs manageable.</li>
+<li>Typically <strong>1 token ~ 4 characters</strong> or <strong>~ 0.75 words</strong></li>
 </ul>
 </li>
 <li><strong>Sentence tokenization</strong> - Divides the text into individual sentences</li>
 </ul>
-<h2 id="vectorization"><a href="./ml-nlpb/#vectorization">Vectorization</a></h2>
+<h2 id="vectorization"><a href="./nlpb/#vectorization">Vectorization</a></h2>
 <h3 id="bag-of-words">Bag Of Words</h3>
 <p>This is the simplest vectorization technique and involves three operations:</p>
 <ul>
