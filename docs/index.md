@@ -1,12 +1,12 @@
 ??? abstract "Terminology"
     - **Corpus**: A large collection of text documents or spoken language data used for training and testing NLP models
     - **Dimensionality**: Number of dimensions in a word vector. A high-dimensional word vector would have many dimensions, allowing it to capture a wide range of characteristics and nuances of the word.
-    - **[Embedding](./ml-nlpb/#embeddings)**: Vectorization in multi dimensional space. To give tokens meaning, the model must be trained on them. This allows the model to learn the meanings of words and how they relate to other words. To achieve this, the word vectors are “embedded” into an embedding space.
-    - **Named Entity Recognition(NER)**: A named entity is a “real-world object” that’s assigned a name – for example, a person, a country, a product or a book title. Also see [spaCy NER](./ml-nlpb/#spacy-ner).
-    - **Pipelines**: The steps used for processing a document and extract the constituent [building blocks](#building-blocks). Also see [spaCy Pipelines](./ml-nlpb/#spacy-pipelines)
+    - **[Embedding](./nlpb/#embeddings)**: Vectorization in multi dimensional space. To give tokens meaning, the model must be trained on them. This allows the model to learn the meanings of words and how they relate to other words. To achieve this, the word vectors are “embedded” into an embedding space.
+    - **Named Entity Recognition(NER)**: A named entity is a “real-world object” that’s assigned a name – for example, a person, a country, a product or a book title. Also see [spaCy NER](./nlpb/#spacy-ner).
+    - **Pipelines**: The steps used for processing a document and extract the constituent [building blocks](#building-blocks). Also see [spaCy Pipelines](./nlpb/#spacy-pipelines)
     - **Stemming / Lemmatization**: Reducing words to their base or root form to handle variations of the same word, such as singular/plural forms or verb tenses
     - **Stopwords**: Commonly used words (determinants, conjunctions, prepositions, pronouns, auxillary verbs etc.) in a language but do not carry much meaning or significance. 
-    - **[Tokenization](#tokenization)**: The process of parsing a statement and representing them as the constituent words or punctuations.  For example, dividing text by whitespace is one common approach, but there are many others. The purpose of tokenization is to create a vocabulary from a corpus. Each token is assigned a unique id to represent it as a number. Also see [spaCy Tokenization](./ml-nlpb/#with-spacy)
+    - **[Tokenization](#tokenization)**: The process of parsing a statement and representing them as the constituent words or punctuations.  For example, dividing text by whitespace is one common approach, but there are many others. The purpose of tokenization is to create a vocabulary from a corpus. Each token is assigned a unique id to represent it as a number. Also see [spaCy Tokenization](./nlpb/#with-spacy)
     - **Transformers**: Deep learning models that are trained on vectors to understand the meaning of words and how they relate to each other.
     - **Vector / Word Vector**: Vector representation of a word in NLP. Each word vector can be thought of as a point in a multi-dimensional space, where each dimension represents a particular aspect or characteristic of the word. Combining all the dimensions in a vector allows the model to understand the word’s meaning and how it relates to other words.
     - **[Vectorization](#vectorization)**: Machine learning models typically require the data/features to be numeric. The process of transforming non-numeric data such as tokens into numeric features is called vectorization. During vectorization, the unique ids in the tokens are assigned to randomly initialized n-dimensional vectors.
@@ -26,14 +26,15 @@
 - **Language detection:** "translate this page"
 - **Sentiment Analysis:**
 
-## [Tokenization](./ml-nlpb/#tokenization)
+## [Tokenization](./nlpb/#tokenization)
 - **Character tokenization** - Treats each character as a separate token
 - **Word tokenization** - Divides the text into individual words or even subwords
 - **Subword tokenization** - Combines the benefits of character and word tokenization by breaking down rare words into smaller units while keeping frequent words as unique entities.
     - Allows the model to handle complex words and misspellings while keeping the length of the inputs manageable.
+    - Typically **1 token ~ 4 characters** or **~ 0.75 words**
 - **Sentence tokenization** - Divides the text into individual sentences
 
-## [Vectorization](./ml-nlpb/#vectorization)
+## [Vectorization](./nlpb/#vectorization)
 ### Bag Of Words
 This is the simplest vectorization technique and involves three operations:
 

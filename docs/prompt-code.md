@@ -1,4 +1,4 @@
-## OpenAI
+## [OpenAI](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=bdf93334)
 !!! abstract "Sample Code"
     ```python
     import os
@@ -7,6 +7,7 @@
 
     model="gpt-5-nano"
     openai = OpenAI()  # Automatically uses the env variable OPENAI_API_KEY. 
+    response_format={"type": "json_object"}
 
     # We can also specify the api_key parameter explicitly
     _ = load_dotenv(find_dotenv())
@@ -24,12 +25,13 @@
             {"role": "user", "content": user_prompt}]
 
     # Helper function for prompting
-    def get_completion(prompt, model="gpt-3.5-turbo", temperature=0, max_tokens=200):
+    def get_completion(prompt, response_format, model="gpt-3.5-turbo", temperature=0, max_tokens=200):
         response = openai.chat.completions.create(
             model=model,
             messages=get_message(prompt),
             max_tokens=max_tokens,
             temperature=temperature, 
+            response_format=response_format
         )
         return response.choices[0].message.content
 

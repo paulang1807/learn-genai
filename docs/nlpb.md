@@ -88,6 +88,21 @@ Also see [spaCy Linguistic Annotations](https://spacy.io/usage/spacy-101#annotat
     print(ix, token.text, token.lemma_, token.pos_, token.tag_, token.dep_, token.shape_, token.is_alpha, token.is_stop)
     ```
 
+#### With TitToken
+!!! abstract "Sample Code"
+
+    ```python
+    import tiktoken
+
+    encoding = tiktoken.encoding_for_model("gpt-4.1-mini")
+
+    tokens = encoding.encode("Apple is looking at buying U.K. startup for $1 billion")
+
+    for token_id in tokens:
+        token_text = encoding.decode([token_id])
+        print(f"{token_id} = {token_text}")
+    ```
+
 ### [spaCy NER](https://colab.research.google.com/drive/17zJbut8FVMEGr9ElmaZ-ZVciqs60cXnT#scrollTo=rfyXXK9EGYIT)
 spaCy can recognize various types of named entities in a document and show the label of the named entity as well as the position of the entity in the document. spaCy NER returns the following:
 

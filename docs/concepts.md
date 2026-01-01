@@ -1,3 +1,4 @@
+<p id="cust-id-genai-terminology"></p>
 !!! abstract "Terminology"
     - **GPT**: Generative Pre-Trained Transformers
     - **GAN**: Generative Adversarial Networks
@@ -5,6 +6,7 @@
     - **RLHF**: Reinforcement Learning Human Feedback
     - **RAG**: Retrieval Augmented Generation
     - **Multimodal AI**: Allows inputs from muliple modalities (i.e. different types of data) such as images, video, audio and text
+    - **Context Window**: Max number of tokens that the model can consider when generating the next token.[^2]
 
 ## Custom GPTs
 - Creating customized GPTs by pre-setting instructions
@@ -49,6 +51,24 @@
     - **Reinforcement Training** 
         - Let the model know how good the response is and the model learns based on the feedback.
 
+### Types
+
+- Base 
+    - Provide some basic instructions or examples 
+        - Examples can be in terms of how to respond (A) when something is asked (Q)
+    - Ask the desired question at the end and wait for the LLM to respond
+    - Can be useful for fine tuning to learn new skills
+- Chat / Instruct
+    - Provide context in addition to the examples, otherwise similar to Base LLMs
+    - Can be used for interactive use cases
+        - Content generation
+- Reasoning / Thinking
+    - Include instruction to make the LLM think through and explain the steps
+    - Adding the word `wait` in the instructions can make the LLM analyze its thought process
+        - Can result in better outputs
+    - More useful for problem solving
+    - Uses ==**Inference Time Scaling**==[^1] ( as opposed to Training Time Scaling)
+
 ## Retrieval Augmented Generation (RAG)
 - Components for RAG Implementation
     - Document Ingestion
@@ -74,3 +94,8 @@
         - Response from LLM
 
 *[Similarity Search]: Embeddings from user query used to search vector store for similar vector embeddings
+
+[^1]: Another technique for Inference Time Scaling is to provide more data in the input instructions
+[^2]:
+    - Includes the full conversation - all inputs and outputs
+    - Model will fail to generate output if the Context Window is exceeded
