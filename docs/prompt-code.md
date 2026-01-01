@@ -3,6 +3,7 @@
     ```python
     import os
     from dotenv import load_dotenv, find_dotenv
+    from IPython.display import Markdown, display, update_display
     from openai import OpenAI
 
     model="gpt-5-nano"
@@ -25,7 +26,7 @@
             {"role": "user", "content": user_prompt}]
 
     # Helper function for prompting
-    def get_completion(prompt, response_format, model="gpt-3.5-turbo", temperature=0, max_tokens=200):
+    def get_completion(prompt, response_format=None, model="gpt-3.5-turbo", temperature=1, max_tokens=200):
         response = openai.chat.completions.create(
             model=model,
             messages=get_message(prompt),
@@ -39,7 +40,29 @@
 
     response = get_completion(prompt)
     print(response)
+    ```
 
+!!! example "Streaming Output"
+    ```python
+    # Helper function for prompting with streaming output
+    def get_streaming_completion(prompt, model="gpt-3.5-turbo", temperature=1):
+        stream = openai.chat.completions.create(
+            model=model,
+            messages=get_message(prompt),
+            temperature=temperature, 
+            stream=True
+        )
+
+        response = ""
+
+        # Create an empty markdown handle for streaming output
+        display_handle = display(Markdown(""), display_id=True)
+
+        for chunk in stream:
+            response += chunk.choices[0].delta.content or ''
+            update_display(Markdown(response), display_id=display_handle.display_id)
+
+    get_streaming_completion(prompt)
     ```
 
 ??? info "Using POST"
