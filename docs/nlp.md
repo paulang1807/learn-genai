@@ -8,7 +8,7 @@
 
     [Count Vectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)
 
-    [Notebook](https://colab.research.google.com/drive/1oe1Hfd81xUTT0Fj3c5NB2D9wOSRJTZgd#scrollTo=efa9f818-cd1b-434a-9bc3-7f80e22f4ab3)
+    [Notebook](https://colab.research.google.com/drive/1-fdy-dG8kTNS0fr5njYG_r5UIXbtwQ8i#scrollTo=efa9f818-cd1b-434a-9bc3-7f80e22f4ab3)
 
     ```python
     import nltk
@@ -89,14 +89,14 @@
     
 1. [LatentDirichletAllocation](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html)
 
-    [Notebook](https://colab.research.google.com/drive/1oe1Hfd81xUTT0Fj3c5NB2D9wOSRJTZgd#scrollTo=oijAFtRBiNXq)
+    [Notebook](https://colab.research.google.com/drive/1-fdy-dG8kTNS0fr5njYG_r5UIXbtwQ8i#scrollTo=oijAFtRBiNXq)
 
 ### BERTopic
 
 !!! abstract "Sample Code"
     [BERTopic](https://maartengr.github.io/BERTopic/index.html)
 
-    [Notebook](https://colab.research.google.com/drive/1oe1Hfd81xUTT0Fj3c5NB2D9wOSRJTZgd#scrollTo=JdBOjPxhDHnd)
+    [Notebook](https://colab.research.google.com/drive/1-fdy-dG8kTNS0fr5njYG_r5UIXbtwQ8i#scrollTo=JdBOjPxhDHnd)
 
     ```python
     from bertopic import BERTopic

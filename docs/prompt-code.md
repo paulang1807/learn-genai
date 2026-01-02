@@ -91,9 +91,10 @@
     print(prompt_response)
     ```
 
-## Google
+## [Google](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=ml6va219X85-)
 !!! abstract "Sample Code"
     ```python
+    # Using OpenAI API wrapper
     from openai import OpenAI
 
     GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
@@ -106,6 +107,51 @@
                 messages=get_message(prompt))
 
     response.choices[0].message.content
+    ```
+
+    ```python
+    # Using Gemini API wrapper
+    from google import genai
+    from google.genai import types
+
+    gemini = genai.Client(api_key=google_api_key)
+
+    # Helper function for adding prompts and responses to Content
+    def get_content_from_messages(message, role):
+        return types.Content(
+            role=role,
+            parts=[types.Part.from_text(text=message)]
+        )
+
+    # Helper function for generating streaming output
+    def get_gemini_streaming_completion(message_content, config, model="gemini-2.5-flash-lite"):
+        stream = llm.models.generate_content_stream(
+            model=model,
+            contents=message_content,
+            config=config,
+        )
+            
+        response = ""
+
+        # Create an empty markdown handle for streaming output
+        display_handle = display(Markdown(""), display_id=True)
+            
+        for chunk in stream:
+            response += chunk.text or ''
+            update_display(Markdown(response), display_id=display_handle.display_id)
+
+    # System Prompt
+    system_prompt_config = types.GenerateContentConfig(system_instruction=system_prompt)
+
+    prompt_list = []
+
+    # User Prompt
+    prompt = user_prompt_prefix + f"""Tell me a joke"""
+    user_message = get_content_from_messages(prompt, "user")
+
+    prompt_list.append(user_message) 
+
+    get_gemini_streaming_completion(prompt_list, system_prompt_config, model="gemini-2.5-flash-lite")
     ```
 
 ## Ollama
