@@ -578,6 +578,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#routers-and-abstraction-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routers and Abstraction Layers
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -941,6 +952,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#routers-and-abstraction-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routers and Abstraction Layers
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1120,6 +1142,30 @@
 </li>
 <li>More useful for problem solving</li>
 <li>Uses <mark><strong>Inference Time Scaling</strong></mark><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">2</a></sup> ( as opposed to Training Time Scaling)</li>
+</ul>
+</li>
+</ul>
+<h3 id="routers-and-abstraction-layers">Routers and Abstraction Layers</h3>
+<ul>
+<li>
+<p><strong>Routers</strong> - Remote process that routes requests to the appropriate LLM based on the input</p>
+<ul>
+<li>Requires the use of a single router api<ul>
+<li>Separate API for each LLM not needed</li>
+</ul>
+</li>
+<li>Example: <a href="https://openrouter.ai">OpenRouter</a> <ul>
+<li>Includes 25+ free models ( has limits on number of requests per day)</li>
+<li><a href="../prompt-code/#openrouter">Code Sample</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Abstraction Layers</strong> - Part of the local codebase that abstracts the complexity of the LLM calls</p>
+<ul>
+<li>Called with a consistent api </li>
+<li>Calls the LLM separately with the appropriate parameters</li>
 </ul>
 </li>
 </ul>
