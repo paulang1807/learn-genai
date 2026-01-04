@@ -267,11 +267,11 @@ Ensure that [Ollama is running](../local/#cust-id-ollama-comm) before using this
 ### OpenRouter
 !!! abstract "Sample Code"
     ```python
-    import OpenAI
+    from openai import OpenAI
 
     openrouter = OpenAI(base_url=openrouter_url, api_key=openrouter_api_key)
 
     # Notice that the value for the model parameter is in the form <model_provider>/<model_name>
-    response = openrouter.chat.completions.create(model="google/gemini-2.0-flash-exp:free", messages=tell_a_joke)
+    response = openrouter.chat.completions.create(model="google/gemini-2.0-flash-exp:free", messages=[{"role": "user", "content": "Tell me a joke."}])
     display(Markdown(response.choices[0].message.content))
     ```

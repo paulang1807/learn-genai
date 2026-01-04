@@ -63,7 +63,7 @@ Also see [Ollama Prompting in Python](../prompt-code/#ollama)
 ## Local Frameworks
 
 ### [LLamaIndex](https://www.llamaindex.ai/)
-#### Implementation Steps
+#### Implementation Steps Using LlamaFile
 
 - Install required packages
 ```bash

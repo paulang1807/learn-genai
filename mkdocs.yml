@@ -95,9 +95,8 @@ nav:
     - Concepts: concepts.md
     - Prompts: 
       - Overview: prompts.md
-      - Code Snippets: prompt-code.md
       - Samples: prompt-samples.md
-    - Frameworks: frameworks.md
+    - Routers and Frameworks: frameworks.md
     - Agents: agents.md
     - Local Execution: local.md
-    - Notebooks: notebooks/index.md
+    - Code Snippets: prompt-code.md
