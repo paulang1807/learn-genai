@@ -69,6 +69,18 @@
     - More useful for problem solving
     - Uses ==**Inference Time Scaling**==[^1] ( as opposed to Training Time Scaling)
 
+### Routers and Abstraction Layers
+- **Routers** - Remote process that routes requests to the appropriate LLM based on the input
+    - Requires the use of a single router api
+        - Separate API for each LLM not needed
+    - Example: [OpenRouter](https://openrouter.ai) 
+        - Includes 25+ free models ( has limits on number of requests per day)
+        - [Code Sample](../prompt-code/#openrouter)
+
+- **Abstraction Layers** - Part of the local codebase that abstracts the complexity of the LLM calls
+    - Called with a consistent api 
+    - Calls the LLM separately with the appropriate parameters
+
 ## Retrieval Augmented Generation (RAG)
 - Components for RAG Implementation
     - Document Ingestion

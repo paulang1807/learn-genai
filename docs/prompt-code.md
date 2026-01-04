@@ -1,4 +1,79 @@
-## [OpenAI](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=bdf93334)
+??? tip "Check api key env variable"
+    ```python
+    import os
+    from dotenv import load_dotenv, find_dotenv
+    load_dotenv(find_dotenv())
+
+    openai_api_key = os.getenv('OPENAI_API_KEY')
+    anthropic_api_key = os.getenv('ANTHROPIC_API_KEY')
+    google_api_key = os.getenv('GOOGLE_API_KEY')
+    deepseek_api_key = os.getenv('DEEPSEEK_API_KEY')
+    groq_api_key = os.getenv('GROQ_API_KEY')
+    grok_api_key = os.getenv('GROK_API_KEY')
+    openrouter_api_key = os.getenv('OPENROUTER_API_KEY')
+
+    if openai_api_key:
+        print(f"OpenAI API Key exists and begins with {openai_api_key[:8]}")
+    else:
+        print("OpenAI API Key not set")
+        
+    if anthropic_api_key:
+        print(f"Anthropic API Key exists and begins with {anthropic_api_key[:7]}")
+    else:
+        print("Anthropic API Key not set")
+
+    if google_api_key:
+        print(f"Google API Key exists and begins with {google_api_key[:2]}")
+    else:
+        print("Google API Key not set")
+
+    if deepseek_api_key:
+        print(f"DeepSeek API Key exists and begins with {deepseek_api_key[:3]}")
+    else:
+        print("DeepSeek API Key not set")
+
+    if groq_api_key:
+        print(f"Groq API Key exists and begins with {groq_api_key[:4]}")
+    else:
+        print("Groq API Key not set")
+
+    if grok_api_key:
+        print(f"Grok API Key exists and begins with {grok_api_key[:4]}")
+    else:
+        print("Grok API Key not set")
+
+    if openrouter_api_key:
+        print(f"OpenRouter API Key exists and begins with {openrouter_api_key[:3]}")
+    else:
+        print("OpenRouter API Key not set")
+    ``` 
+
+??? tip "Connect Strings"
+    ```python
+    # For Gemini, DeepSeek and Groq, we can use the OpenAI python client
+    # Because Google and DeepSeek have endpoints compatible with OpenAI
+    # And OpenAI allows you to change the base_url
+
+    anthropic_url = "https://api.anthropic.com/v1/"
+    gemini_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
+    deepseek_url = "https://api.deepseek.com"
+    groq_url = "https://api.groq.com/openai/v1"
+    grok_url = "https://api.x.ai/v1"
+    openrouter_url = "https://openrouter.ai/api/v1"
+    ollama_url = "http://localhost:11434/v1"
+
+    openai = OpenAI()
+    anthropic = OpenAI(api_key=anthropic_api_key, base_url=anthropic_url)
+    gemini = OpenAI(api_key=google_api_key, base_url=gemini_url)
+    deepseek = OpenAI(api_key=deepseek_api_key, base_url=deepseek_url)
+    groq = OpenAI(api_key=groq_api_key, base_url=groq_url)
+    grok = OpenAI(api_key=grok_api_key, base_url=grok_url)
+    openrouter = OpenAI(base_url=openrouter_url, api_key=openrouter_api_key)
+    ollama = OpenAI(api_key="dummy", base_url=ollama_url)
+    ``` 
+
+## LLMs
+### [OpenAI](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=bdf93334)
 !!! abstract "Sample Code"
     ```python
     import os
@@ -91,7 +166,7 @@
     print(prompt_response)
     ```
 
-## [Google](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=ml6va219X85-)
+### [Google](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=ml6va219X85-)
 !!! abstract "Sample Code"
     ```python
     # Using OpenAI API wrapper
@@ -154,7 +229,7 @@
     get_gemini_streaming_completion(prompt_list, system_prompt_config, model="gemini-2.5-flash-lite")
     ```
 
-## Ollama
+### Ollama
 Ensure that [Ollama is running](../local/#cust-id-ollama-comm) before using this code.
 !!! abstract "Sample Code"
     ```python
@@ -171,4 +246,32 @@ Ensure that [Ollama is running](../local/#cust-id-ollama-comm) before using this
                 messages=get_message(prompt))
 
     response.choices[0].message.content
+    ```
+
+### Anthropic
+!!! abstract "Sample Code"
+    ```python
+    from anthropic import Anthropic
+
+    client = Anthropic()
+
+    response = client.messages.create(
+        model="claude-sonnet-4-5-20250929",
+    messages=[{"role": "user", "content": "Tell me a joke."}],
+    max_tokens=100     # This parameter is mandatory for Anthropic
+    )
+    print(response.content[0].text)
+    ```
+
+## Routers  
+### OpenRouter
+!!! abstract "Sample Code"
+    ```python
+    import OpenAI
+
+    openrouter = OpenAI(base_url=openrouter_url, api_key=openrouter_api_key)
+
+    # Notice that the value for the model parameter is in the form <model_provider>/<model_name>
+    response = openrouter.chat.completions.create(model="google/gemini-2.0-flash-exp:free", messages=tell_a_joke)
+    display(Markdown(response.choices[0].message.content))
     ```
