@@ -688,6 +688,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#prompt-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt Caching
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Caching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenAI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anthropic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anthropic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gemini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gemini
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -962,6 +1012,56 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt Caching
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Caching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenAI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anthropic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anthropic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gemini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gemini
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1355,6 +1455,52 @@
 </li>
 </ul>
 <p>See <a href="../prompt-samples">Prompt Samples</a> for more examples</p>
+<h2 id="prompt-caching">Prompt Caching</h2>
+<h3 id="openai"><a href="https://platform.openai.com/docs/guides/prompt-caching">OpenAI</a></h3>
+<ul>
+<li>Cache hits are only possible for <strong>exact prefix matches</strong> within a prompt<ul>
+<li>To realize caching benefits<ul>
+<li>Place static content like instructions and examples at the beginning of your prompt</li>
+<li>Put variable content, such as user-specific information, at the end</li>
+<li>Applies to images and tools as well</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cached input is 4X cheaper</li>
+<li><a href="https://openai.com/api/pricing/">Pricing</a></li>
+</ul>
+<h3 id="anthropic"><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching">Anthropic</a></h3>
+<ul>
+<li>Have to tell Claude what you are caching</li>
+<li>Price is 25% MORE to "prime" the cache<ul>
+<li>Price is 10X less to reuse from the cache with inputs</li>
+</ul>
+</li>
+<li><a href="https://www.anthropic.com/pricing#api">Pricing</a></li>
+</ul>
+<h3 id="gemini"><a href="https://ai.google.dev/gemini-api/docs/caching?lang=python">Gemini</a></h3>
+<ul>
+<li>Supports both 'implicit' and 'explicit' prompt caching<ul>
+<li>Implicit caching <ul>
+<li>Automatically enabled on most Gemini models</li>
+<li>No cost saving guarantee</li>
+</ul>
+</li>
+<li>Explicit caching <ul>
+<li>Can be manually enabled on most models</li>
+<li>Cost saving guarantee</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>To increase the chance of an implicit cache hit:<ul>
+<li>Try putting large and common contents at the beginning of your prompt</li>
+<li>Try to send requests with similar prefix in a short amount of time</li>
+</ul>
+</li>
+<li><a href="https://ai.google.dev/gemini-api/docs/pricing?lang=python">Pricing</a></li>
+</ul>
 <div class="footnote">
 <hr />
 <ol>
