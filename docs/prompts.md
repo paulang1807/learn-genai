@@ -302,4 +302,33 @@
 
 See [Prompt Samples](../prompt-samples) for more examples
 
+## Prompt Caching
+### [OpenAI](https://platform.openai.com/docs/guides/prompt-caching)
+- Cache hits are only possible for **exact prefix matches** within a prompt
+    - To realize caching benefits
+        - Place static content like instructions and examples at the beginning of your prompt
+        - Put variable content, such as user-specific information, at the end
+        - Applies to images and tools as well
+- Cached input is 4X cheaper
+- [Pricing](https://openai.com/api/pricing/)
+
+### [Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)
+- Have to tell Claude what you are caching
+- Price is 25% MORE to "prime" the cache
+    - Price is 10X less to reuse from the cache with inputs
+- [Pricing](https://www.anthropic.com/pricing#api)
+
+### [Gemini](https://ai.google.dev/gemini-api/docs/caching?lang=python)
+- Supports both 'implicit' and 'explicit' prompt caching
+    - Implicit caching 
+        - Automatically enabled on most Gemini models
+        - No cost saving guarantee
+    - Explicit caching 
+        - Can be manually enabled on most models
+        - Cost saving guarantee
+- To increase the chance of an implicit cache hit:
+    - Try putting large and common contents at the beginning of your prompt
+    - Try to send requests with similar prefix in a short amount of time
+- [Pricing](https://ai.google.dev/gemini-api/docs/pricing?lang=python)
+
 [^1]: Based on [DeepLearning.ai](https://learn.deeplearning.ai/chatgpt-prompt-eng/)

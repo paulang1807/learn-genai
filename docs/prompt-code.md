@@ -264,7 +264,7 @@ Ensure that [Ollama is running](../local/#cust-id-ollama-comm) before using this
     ```
 
 ## Routers  
-### OpenRouter
+### [OpenRouter](https://colab.research.google.com/drive/1HJDuNrnLAXUANi5_xfBrB-QDvfu5bgwb#scrollTo=aHS_EAUQxuR_)
 !!! abstract "Sample Code"
     ```python
     from openai import OpenAI
@@ -273,5 +273,25 @@ Ensure that [Ollama is running](../local/#cust-id-ollama-comm) before using this
 
     # Notice that the value for the model parameter is in the form <model_provider>/<model_name>
     response = openrouter.chat.completions.create(model="google/gemini-2.0-flash-exp:free", messages=[{"role": "user", "content": "Tell me a joke."}])
-    display(Markdown(response.choices[0].message.content))
+    print(response.choices[0].message.content)
+    ```
+
+## Frameworks (Abstraction Layers)
+
+### [LangChain](https://colab.research.google.com/drive/1HJDuNrnLAXUANi5_xfBrB-QDvfu5bgwb#scrollTo=MUpNK1YTyfDg)
+!!! abstract "Sample Code"
+    ```python
+    from langchain_openai import ChatOpenAI
+    llm = ChatOpenAI(model="gpt-5-mini", api_key = openai_api_key)
+    response = llm.invoke([{"role": "user", "content": "Tell me a joke."}])
+    print(response.content)
+    ```
+
+### [LiteLLM](https://colab.research.google.com/drive/1HJDuNrnLAXUANi5_xfBrB-QDvfu5bgwb#scrollTo=KQbggbJZyiKa)
+!!! abstract "Sample Code"
+    ```python
+    from litellm import completion
+    # Notice that the value for the model parameter is in the form <model_provider>/<model_name>
+    response = completion(model="openai/gpt-4.1-nano", messages=[{"role": "user", "content": "Tell me a joke."}], api_key=openai_api_key)
+    print(response.choices[0].message.content)
     ```
