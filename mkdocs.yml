@@ -97,6 +97,7 @@ nav:
       - Overview: prompts.md
       - Samples: prompt-samples.md
     - Routers and Frameworks: frameworks.md
-    - Agents: agents.md
     - Local Execution: local.md
+    - UI Tools: ui.md
+    - Agents: agents.md
     - Code Snippets: prompt-code.md

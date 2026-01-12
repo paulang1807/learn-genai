@@ -25,6 +25,11 @@
     | ollama run <model_name> | To run the model |
     | ollama serve | To start a local server[^1] |
     
+??? tip "[Running Ollama in Colab](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=f6b3ab3a)"
+    - Install Ollama: Install the Ollama CLI in the Colab environment. This typically involves downloading and running an installation script.
+    - Start Ollama Server: Start the Ollama server in the background. This will make the API endpoint available for use.
+    - Download an Ollama Model: Download a specific language model (e.g., 'llama3.1:8b') using the Ollama CLI.
+
 Also see [Ollama Prompting in Python](../prompt-code/#ollama)
 
 ### [LlamaFile](https://github.com/Mozilla-Ocho/llamafile)
@@ -303,4 +308,6 @@ pip install -U langchain langchain-openai langchain-community
 [^1]:
     This will show the ip and port of the server which can then be used as an endpoint to interact with the LLM.
 
-     - If it shows the error: `Error: listen tcp 127.0.0.1:11434: bind: address already in use`, it means that ollama is already running at port 11434
+    - This should launch the ollama ui on http://127.0.0.1:11434
+        - Accessing the above url should display the message "Ollama is running"
+    - If it shows the error: `Error: listen tcp 127.0.0.1:11434: bind: address already in use`, it means that ollama is already running at port 11434
