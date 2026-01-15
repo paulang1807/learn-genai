@@ -42,5 +42,18 @@
     input_dropdown = gr.Dropdown(["Option1", "Option2", "Option3"], label="Select an option", value="Option1")  # value parameter sets default value
     ```
 
+### Chat Interface
+- The callbackfunction should be created with two parameters - message and history
+- Gradio will automatically handle the history and pass it as a list of messages to the callback function 
+    - The history contains the role and content as well as some additional attributes such as metadata and options
+
+!!! example "[Gradio Chat Interface](https://colab.research.google.com/drive/1dnXN35xnQbLL1ZC_rY-pigl3nqHFZNqW#scrollTo=k0NNPnHwEr-H)"
+    ```python
+    import gradio as gr
+    
+    # Use a chat interface
+    iface = gr.ChatInterface(fn=myfunctionname, type="messages")
+    ```
+
 ## [Streamlit](https://streamlit.io/)
 - 

@@ -70,6 +70,9 @@
     - Uses ==**Inference Time Scaling**==[^1] ( as opposed to Training Time Scaling)
 
 ## Retrieval Augmented Generation (RAG)
+
+Rather than just relying on the LLMs to generate the response, RAG looks up the relevant context from the documents and uses it to generate the response
+
 - Components for RAG Implementation
     - Document Ingestion
         - Ingestion
