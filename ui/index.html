@@ -726,6 +726,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Gradio (Colab)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chat Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -844,6 +861,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Gradio (Colab)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chat Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -932,6 +966,22 @@
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1"># Add more input types</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">input_dropdown</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">([</span><span class="s2">&quot;Option1&quot;</span><span class="p">,</span> <span class="s2">&quot;Option2&quot;</span><span class="p">,</span> <span class="s2">&quot;Option3&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Select an option&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Option1&quot;</span><span class="p">)</span>  <span class="c1"># value parameter sets default value</span>
+</span></code></pre></div>
+</div>
+<h3 id="chat-interface">Chat Interface</h3>
+<ul>
+<li>The callbackfunction should be created with two parameters - message and history</li>
+<li>Gradio will automatically handle the history and pass it as a list of messages to the callback function <ul>
+<li>The history contains the role and content as well as some additional attributes such as metadata and options</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title"><a href="https://colab.research.google.com/drive/1dnXN35xnQbLL1ZC_rY-pigl3nqHFZNqW#scrollTo=k0NNPnHwEr-H">Gradio Chat Interface</a></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">gradio</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gr</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Use a chat interface</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">iface</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">ChatInterface</span><span class="p">(</span><span class="n">fn</span><span class="o">=</span><span class="n">myfunctionname</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;messages&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <h2 id="streamlit"><a href="https://streamlit.io/">Streamlit</a></h2>
