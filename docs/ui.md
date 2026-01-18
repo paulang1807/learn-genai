@@ -28,6 +28,8 @@
     iface.launch(share=True)
     # Use inbrowser=True when running locally and want to open in browser
     iface.launch(inbrowser=True)
+    # User debug=True to debug the interface
+    iface.launch(debug=True)
 
     # Add authentication
     iface.launch(auth=[("username1", "password1"),("username2", "password2")])
