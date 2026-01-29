@@ -39,6 +39,12 @@
     outputs = gr.Textbox(label="Output Label:", info=f"Output message", lines=5)
     # Get output in markdown format
     outputs = gr.Markdown(label="Output Label:")
+    # Get image output
+    outputs = gr.Image(height=500, interactive=False, label="Output Label:")
+    # Get audio output
+    output = gr.Audio(autoplay=True)
+    # Get video output
+    output = gr.Video(height=500, interactive=False)
 
     # Add more input types
     input_dropdown = gr.Dropdown(["Option1", "Option2", "Option3"], label="Select an option", value="Option1")  # value parameter sets default value
@@ -54,7 +60,30 @@
     import gradio as gr
     
     # Use a chat interface
-    iface = gr.ChatInterface(fn=myfunctionname, type="messages")
+    iface = gr.ChatInterface(fn=myfunctionname, type="messages").launch(share=True)
+    ```
+
+### [Multiple UI Components using Blocks](https://colab.research.google.com/drive/1dnXN35xnQbLL1ZC_rY-pigl3nqHFZNqW#scrollTo=NpamQHqAceoJ)
+
+!!! example "Gradio Blocks"
+    ```python
+    import gradio as gr
+    
+    # Use a block interface with multiple UI components
+    # Use Blocks to create a custom interface
+    with gr.Blocks() as demo:
+        # Use Row to create a horizontal layout
+        with gr.Row():
+            gr.Markdown("# My Gradio App")
+        with gr.Row():
+            chat_ui = gr.Chatbot(height=500, type="messages", allow_tags=False)
+            img_ui = gr.Image(height=500, interactive=False)
+        with gr.Row():
+            audio_ui = gr.Audio(autoplay=True)
+        with gr.Row():
+            user_msg_ui = gr.Textbox(label="Enter message here:")
+
+    demo.launch(share=True)
     ```
 
 ## [Streamlit](https://streamlit.io/)

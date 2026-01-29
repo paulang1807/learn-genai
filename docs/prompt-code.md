@@ -74,6 +74,7 @@
 
 ## LLMs
 ### [OpenAI](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=bdf93334)
+#### General Prompting
 !!! abstract "Sample Code"
     ```python
     import os
@@ -164,6 +165,54 @@
 
     prompt_response = response.json()["choices"][0]["message"]["content"]
     print(prompt_response)
+    ```
+
+#### [Prompting for Images](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=vEnpnPRTcbY2)
+
+!!! abstract "Sample Code"
+    ```python
+    import base64
+    from io import BytesIO
+    from PIL import Image
+    from IPython.display import display
+    from openai import OpenAI
+
+    openai = OpenAI()
+    response = openai.images.generate(
+        model="dall-e-3",
+        prompt="A photo of an astronaut riding a horse.",
+        n=1,
+        size="1024x1024",
+        response_format="b64_json",
+    )
+    image_base64 = response.data[0].b64_json
+    image_data = base64.b64decode(image_base64)
+
+    image = Image.open(BytesIO(image_data))
+    display(image)
+    # This will return the image file as a byte string. 
+    # To save the image file, you can use the following code:
+    with open("image.png", "wb") as f:
+        f.write(image_data)
+    ```
+
+#### [Prompting for Speech](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=Wax_i5yMgAwk)
+
+!!! abstract "Sample Code"
+    ```python
+    from openai import OpenAI
+
+    openai = OpenAI()
+    response = openai.audio.speech.create(
+        model="gpt-4o-mini-tts",
+        voice="onyx",    # Some other options - alloy, coral
+        input="Hello, how are you?"
+    )
+    response.content
+    # This will return the audio file as a byte string. 
+    # To save the audio file, you can use the following code:
+    with open("audio.mp3", "wb") as f:
+        f.write(response.content)
     ```
 
 ### [Google](https://colab.research.google.com/drive/1aCKnhpmU3y2btDcp9V7jVq0GM8hTe-2d#scrollTo=ml6va219X85-)

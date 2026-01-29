@@ -1,3 +1,9 @@
+# Agents
+- Agents are LLMs that can 
+    - Call other LLMs, APIs, and other tools to perform complex tasks
+    - Control the workflow and orchestration via tools
+        - Run tools in a loop to achieve a goal
+        
 ## Tools
 
 - Allows LLMs to connect with external functions
