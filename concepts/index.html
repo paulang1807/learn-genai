@@ -578,6 +578,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nf4-quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NF4 Quantization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -969,6 +997,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nf4-quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NF4 Quantization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1150,6 +1206,17 @@
 <li>Uses <mark><strong>Inference Time Scaling</strong></mark><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">2</a></sup> ( as opposed to Training Time Scaling)</li>
 </ul>
 </li>
+</ul>
+<h3 id="quantization">Quantization</h3>
+<ul>
+<li>Process of rounding the weights of the LLMs to a lower precision</li>
+<li>Reduces the memory(VRAM) footprint, inference time and compute required to run the LLMs without a significant loss in accuracy</li>
+<li>Commonly used for deploying LLMs on edge devices and consumer devices (mobiles, laptops etc.)</li>
+</ul>
+<h4 id="nf4-quantization">NF4 Quantization</h4>
+<ul>
+<li>Specialized, "high-intelligence" way of rounding the weights of the LLMs to a lower precision</li>
+<li>Uses only 4 bits (instead of 16 bits) to represent the weights</li>
 </ul>
 <h2 id="retrieval-augmented-generation-rag">Retrieval Augmented Generation (RAG)</h2>
 <p>Rather than just relying on the LLMs to generate the response, RAG looks up the relevant context from the documents and uses it to generate the response</p>
